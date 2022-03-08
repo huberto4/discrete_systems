@@ -16,7 +16,7 @@ class IIR_filter
 {
 public:
     IIR_filter(float,float);
-    IIR_filter(float,float,float);
+    IIR_filter(float,float,float,float);
     virtual ~IIR_filter();
     float eval(float);
     float operator()(float u){
@@ -26,4 +26,5 @@ private:
     float *B;
     float *A;
     uint8_t nb,na;
+    float b0,a0,a1,y_old1,y_old2;
 };
